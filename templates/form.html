@@ -1,8 +1,23 @@
 <html>
 <head>
-<script type="text/javascript" src="js/functions.js"></script>
-<title>EWP Corpus</title>
+<script type = "text/javascript">
+var counter = 1;
+var limit = 25;
+
+function addInput(divName) {
+	if (counter == limit) {
+		alert("Courses are capped at 23. Do you have this many students?");
+	}
+	else {
+		var newdiv = document.createElement('div');
+		newdiv.innerHTML = "Entry " + (counter + 1) + ": " + "<input type = 'text' name = 'urls'>";
+		document.getElementById(divName).appendChild(newdiv);
+		counter++;
+	}
+</script>
+	<title>EWP Corpus</title>
 </head>
+
 <body>
 <h1>EWP Corpus Machine</h1>
 <div id="body">
@@ -10,11 +25,11 @@
 	<h2>Instructions:</h2>
 	<p>Please enter the URLs to your students' portfolios in the form below. Click the "Add an Entry" to add another field. Make sure the URLs include the verifier number that comes at the end of the URL. Thanks!</p>
 </div>
-<form name="url_list" action"/bin/retrieve.py" method="POST">
+<form name="url_list" action="/bin/retrieve.py" method="POST">
 	<div id="dynamicInput">
-		Entry 1: <input type="text" name="urls[]">
+		Entry 1: <input type="text" name="urls">
 	</div>
-	<input type="button" value="Add an Entry" onClick="addInput('dynamicInput');">
+	<input type="button" value="Add an Entry" onClick="addInput('dynamicInput')">
 	<input type="button" value="Submit">
 </form>
 

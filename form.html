@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="js/functions.js"></script>
+<title>EWP Corpus</title>
+</head>
+<body>
+<h1>EWP Corpus Machine</h1>
+<div id="body">
+	<p>Welcome to the EWP Corpus Machine! Thank you for your support in helping us generate an EWP corpus for use for research. If you are interested in making use of the corpus or have questions please feel free to contact Dylan Medina <a href="mailto:medinad@uw.edu">medinad@uw.edu</a></p>
+	<h2>Instructions:</h2>
+	<p>Please enter the URLs to your students' portfolios in the form below. Click the "Add an Entry" to add another field. Make sure the URLs include the verifier number that comes at the end of the URL. Thanks!</p>
+</div>
+<form name="url_list" action"/bin/retrieve.py" method="POST">
+	<div id="dynamicInput">
+		Entry 1: <input type="text" name="urls[]">
+	</div>
+	<input type="button" value="Add an Entry" onClick="addInput('dynamicInput');">
+	<input type="button" value="Submit">
+</form>
+
+<div id="footer"></div>
+</body>
+</html>
+

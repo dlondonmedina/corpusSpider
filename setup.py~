@@ -8,7 +8,7 @@ config = {
 	'author': 'Dylan Medina',
 	'url': '',
 	'download_url':'',
-	'author_email':'medinad@uw.edu',
+	'author_email':'',
 	'versiion':'0.1',
 	'install_requires':['nose'],
 	'packages': ['NAME'],

@@ -2,7 +2,6 @@ $def with (content)
 
 <html>
 <head>
-$:scripts
 	<title>EWP Corpus</title>
 </head>
 
